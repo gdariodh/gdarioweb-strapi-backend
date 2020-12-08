@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "info",
+  "info": {
+    "name": "Info",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "default": "Gabriel Dario Díaz Hernández"
+    },
+    "email": {
+      "type": "email",
+      "default": "diazhernandezgabriel2001@gmail.com"
+    },
+    "linkedin": {
+      "type": "string",
+      "default": "https://www.linkedin.com/in/gabrieldiazh19/"
+    },
+    "github": {
+      "type": "string",
+      "default": "https://github.com/gdariodh"
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "about": {
+      "type": "richtext",
+      "required": true,
+      "default": "prueba 2"
+    },
+    "picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "page": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

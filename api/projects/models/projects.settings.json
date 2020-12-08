@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "Projects",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "default": "diazhernandezgabriel2001@gmail.com"
+    },
+    "picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "gallery": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "hashtags": {
+      "type": "richtext",
+      "default": "#Reactjs #Frontend"
+    },
+    "category": {
+      "model": "category"
+    },
+    "github": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
